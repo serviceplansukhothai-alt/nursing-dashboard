@@ -1,8 +1,18 @@
-export default function Home() {
+export const metadata = {
+  title: 'Nursing Dashboard',
+  description: 'ระบบนิเทศออนไลน์',
+}
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <main style={{ padding: 24, fontFamily: 'system-ui, sans-serif' }}>
-      <h1>Dashboard online 🎉</h1>
-      <p>โปรเจกต์ขึ้นหน้าแรกได้แล้ว</p>
-    </main>
-  );
+    <html lang="th">
+      <body style={{ margin: 0, fontFamily: 'system-ui, sans-serif' }}>
+        {children}
+      </body>
+    </html>
+  )
 }
